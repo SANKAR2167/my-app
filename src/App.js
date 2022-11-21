@@ -16,9 +16,9 @@ function App() {
     const names=["Gowsalya", "Subbu", "Karthi"]
   return (
     <div className="App">
-      {names.map((nm)=>(
+      {/* {names.map((nm)=>(
         <Welcome name={nm}/>
-      ))}
+      ))} */}
 
       {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))}
       
