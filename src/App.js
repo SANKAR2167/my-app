@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
 
 // app component = view + logic (declaration)
@@ -33,10 +34,11 @@ function App() {
 
 // user component (declaration)
 function Counter(){
-  let like = 10;
+  let [like, setLike] = useState();
   return(
+    // camelCase
     <div>
-      <button onClick={()=>console.log("you clicked")}>Like</button>
+      <button onClick={()=>setLike(like+1)}>Like</button>
       <p>{like}</p>
     </div>
   )
