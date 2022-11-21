@@ -26,6 +26,7 @@ function App() {
       url = ""/> */}
 
       {/* {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))} */}
+      <Counter/>
     </div>
   );
 }
