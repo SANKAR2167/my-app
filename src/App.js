@@ -9,7 +9,7 @@ function App() {
     url : ""},
     {name : "santhosh",
     url : ""},
-    {name : "Gowsi",
+    {name : "Gows",
     url : ""}];
 
     const names=["Gowsalya", "Subbu", "Karthi"]
