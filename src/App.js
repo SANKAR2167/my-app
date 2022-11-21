@@ -36,7 +36,7 @@ function Counter(){
   let like = 10;
   return(
     <div>
-      <button>Like</button>
+      <button onClick={()=>console.log("you clicked")}>Like</button>
       <p>{like}</p>
     </div>
   )
