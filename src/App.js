@@ -35,11 +35,12 @@ function App() {
 // user component (declaration)
 function Counter(){
   let [like, setLike] = useState(0);
+  let [dislike, setDislike] = useState(0);
   return(
     // camelCase
     <div>
       <button onClick={()=>setLike(like+1)}>👍 {like}</button>
-      <p>{like}</p>
+      <button onClick={()=>setDislike(dislike+1)}>👎 {dislike}</button>
     </div>
   )
 }
