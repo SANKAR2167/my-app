@@ -38,7 +38,7 @@ function Counter(){
   return(
     // camelCase
     <div>
-      <button onClick={()=>setLike(like+1)}>Like</button>
+      <button onClick={()=>setLike(like+1)}>👍 {like}</button>
       <p>{like}</p>
     </div>
   )
