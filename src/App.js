@@ -32,6 +32,14 @@ function App() {
 
 // user component (declaration)
 
+function Welcome({name}){
+  return(
+    <section>
+      <h1>Hello, {name}</h1>
+    </section>
+  )
+}
+
 function User({url, name}) {
 
   //const {pic, name}=props; //object destructuring in JS ES6
@@ -41,13 +49,5 @@ function User({url, name}) {
       <h1>Hi, <span className='name_app'>{name}</span></h1>
     </section> 
   );
-}
-
-function urs({name}){
-  return(
-    <section>
-      <h1>Hello, {name}</h1>
-    </section>
-  )
 }
 export default App;
