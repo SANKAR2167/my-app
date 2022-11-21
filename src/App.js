@@ -25,13 +25,21 @@ function App() {
       name = "Gowsi"
       url = ""/> */}
 
-      {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))}
+      {/* {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))} */}
     </div>
   );
 }
 
 // user component (declaration)
-
+function Counter(){
+  let like = 10;
+  return(
+    <div>
+      <button>Like</button>
+      <p>{like}</p>
+    </div>
+  )
+}
 function Welcome({name}){
   return(
     <section>
