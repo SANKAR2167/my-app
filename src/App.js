@@ -26,8 +26,8 @@ function App() {
       name = "Gowsi"
       url = ""/> */}
 
-      {/* {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))} */}
-      <Counter/>
+      {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))}
+      
     </div>
   );
 }
@@ -59,6 +59,7 @@ function User({url, name}) {
     <section>
       <img src={url} alt={name}/>
       <h1>Hi, <span className='name_app'>{name}</span></h1>
+      <Counter/>
     </section> 
   );
 }
