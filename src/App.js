@@ -34,7 +34,7 @@ function App() {
 
 // user component (declaration)
 function Counter(){
-  let [like, setLike] = useState(10);
+  let [like, setLike] = useState(0);
   return(
     // camelCase
     <div>
