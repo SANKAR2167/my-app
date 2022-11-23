@@ -115,7 +115,7 @@ function MovieList(){
     </div>
   );
 }
-function movie({movie}) {
+function Movie({movie}) {
 
   return(
     <div className='movie-container'>
