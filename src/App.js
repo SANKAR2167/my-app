@@ -111,7 +111,7 @@ function MovieList(){
   ];
   return(
     <div>
-      {movieList.map((mv)=>(<Movie movie={movie}/>))}
+      {movieList.map((mv)=>(<Movie movie={mv}/>))}
     </div>
   );
 }
