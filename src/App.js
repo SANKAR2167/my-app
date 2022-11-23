@@ -125,6 +125,7 @@ function Movie({movie}) {
         <p className='movie-rating'>⭐ {movie.rating}</p>
       </div>
       <p className='movie-summary'>{movie.summary}</p>
+      <Counter/>
     </div>
   )
 }
