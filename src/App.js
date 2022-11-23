@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { User } from './User';
 import {Welcome} from './Welcome';
+import {Counter} from './Counter'
 // app component = view + logic (declaration)
 function App() {
 
