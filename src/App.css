@@ -19,6 +19,7 @@
 .movie-container {
   background-color: orange;
   width: 340px;
+  display: flex;
 }
 
 /* RAM */
