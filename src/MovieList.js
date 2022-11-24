@@ -70,7 +70,15 @@ export function MovieList() {
         <input onChange={(event)=> setPoster(event.target.value)} type="text" placeholder="Poster URL"/>
         <input onChange={(event)=> setRating(event.target.value)} type="text" placeholder="Movie rating"/>
         <input onChange={(event)=> setSummary(event.target.value)} type="text" placeholder="Movie summary"/>
-        <button onClick={()=> setMovieList([...movieList, movie])}>Add Movie</button>
+        <button onClick={()=>{
+          const newMovie = {
+            name: name,
+            poster: poster,
+            rating : rating,
+            summary : summary,
+          };
+          setMovieList([...movieList, newMovie])
+        }}>Add Movie</button>
       </div>
     
       <div className='movie-list'>
