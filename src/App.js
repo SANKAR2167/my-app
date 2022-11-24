@@ -23,8 +23,8 @@ function App() {
       ))} */}
 
       {/* {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))} */}
-      {/* <MovieList/> */}
-      <AddColor/>
+      <MovieList/>
+      {/* <AddColor/> */}
     </div>
   );
 }
