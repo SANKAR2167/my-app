@@ -28,3 +28,11 @@
   gap: 1rem;
   justify-items: center;
 }
+
+.add-movie-form{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 1rem auto;
+  gap: 1rem;
+}
