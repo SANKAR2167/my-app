@@ -44,7 +44,7 @@ function AddColor(){
       <button onClick={()=> setColorList([...colorList, color])}>Add Color</button>
       {colorList.map((clr)=><ColorBox color={clr}/>)}
     </div>
-  )
+  );
 }
 
 function ColorBox({color}){
