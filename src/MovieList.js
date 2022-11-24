@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Movie } from "./Movie";
-
+import Button from '@mui/material/Button';
 export function MovieList() {
   const [movieList, setMovieList] = useState([
     {
@@ -70,7 +70,7 @@ export function MovieList() {
         <input onChange={(event)=> setPoster(event.target.value)} type="text" placeholder="Poster URL"/>
         <input onChange={(event)=> setRating(event.target.value)} type="text" placeholder="Movie rating"/>
         <input onChange={(event)=> setSummary(event.target.value)} type="text" placeholder="Movie summary"/>
-        <button onClick={()=>{
+        <Button onClick={()=>{
           const newMovie = {
             name: name,
             poster: poster,
@@ -78,7 +78,7 @@ export function MovieList() {
             summary : summary,
           };
           setMovieList([...movieList, newMovie])
-        }}>Add Movie</button>
+        }} variant="contained">Add Movie</Button>
       </div>
     
       <div className='movie-list'>
