@@ -144,7 +144,7 @@ function MovieList(){
   ];
   return(
     <div className='movie-list'>
-      {movieList.map((mv)=>(<Movie movie={mv}/>))}
+      {movieList.map((mv, index)=>(<Movie key={index} movie={mv}/>))}
     </div>
   );
 }
