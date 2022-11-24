@@ -23,9 +23,26 @@ function App() {
       ))} */}
 
       {/* {users.map((usr)=>(<User name={usr.name} url={usr.url}/>))} */}
-      <MovieList/>
+      {/* <MovieList/> */}
+      <AddColor/>
     </div>
   );
+}
+
+function AddColor(){
+  const [color, setColor] = useState('orange')
+  const styles = {
+    background: color,
+  }
+  return(
+    <div>
+      <input style={styles} 
+      onChange={(event)=> setColor(event.target.value)}
+      placeholder='enter a color' 
+      value={color}/>
+      <button>Add Color</button>
+    </div>
+  )
 }
 
 function MovieList(){
