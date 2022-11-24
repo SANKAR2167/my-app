@@ -130,7 +130,7 @@ const [show, setShow] = useState(true);
         <h2 className='movie-name'>{movie.name}</h2>
         <p className='movie-rating' style={styles}>⭐ {movie.rating}</p>
       </div>
-      <button onClick={()=>setShow(!show)}></button>
+      <button onClick={()=>setShow(!show)}>Toggle</button>
       {show ? <p className='movie-summary'>{movie.summary}</p>:null}
       <Counter/>
     </div>
