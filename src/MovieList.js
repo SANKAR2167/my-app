@@ -78,7 +78,7 @@ export function MovieList() {
             summary : summary,
           };
           setMovieList([...movieList, newMovie])
-        }} variant="contained">Add Movie</Button>
+        }} variant="contained">AddMovie</Button>
       </div>
     
       <div className='movie-list'>
