@@ -1,5 +1,7 @@
 import { useState } from "react";
-
+import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
+import DeleteIcon from '@mui/icons-material/Delete';
 // user component (declaration)
 
 export function Counter() {
@@ -17,12 +19,16 @@ export function Counter() {
   return (
     // camelCase
     <div>
+      <IconButton aria-label="like" onClick={() => setLike(like + 1)} color='primary'>
+      👍 {like}
+      </IconButton>
 
-      {/* conditional rendering */}
+      <IconButton aria-label="like" onClick={() => setDislike(disLike + 1)} color='error'>
+      👍 {disLike}
+      </IconButton>
 
-      {like - disLike >= 10 ? <h3>You are Awesome</h3> : null}
-      <button style={likeStyle} onClick={() => setLike(like + 1)}>👍 {like}</button>
-      <button style={disLikeStyle} onClick={() => setDislike(disLike + 1)}>👎 {disLike}</button>
+      {/* <button style={likeStyle} onClick={() => setLike(like + 1)}>👍 {like}</button>
+      <button style={disLikeStyle} onClick={() => setDislike(disLike + 1)}>👎 {disLike}</button> */}
     </div>
   );
 }
