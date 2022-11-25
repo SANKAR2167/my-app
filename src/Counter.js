@@ -7,15 +7,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 export function Counter() {
   let [like, setLike] = useState(0);
   let [disLike, setDislike] = useState(0);
-
-  // conditional styling
-  const likeStyle={
-    color:like>= 10 ? "green" : "blue"
-  }
-
-  const disLikeStyle={
-    color:disLike>= 10 ? "red" : "blue"
-  }
   return (
     // camelCase
     <div>
@@ -24,11 +15,8 @@ export function Counter() {
       </IconButton>
 
       <IconButton aria-label="like" onClick={() => setDislike(disLike + 1)} color='error'>
-      👍 {disLike}
+      👎 {disLike}
       </IconButton>
-
-      {/* <button style={likeStyle} onClick={() => setLike(like + 1)}>👍 {like}</button>
-      <button style={disLikeStyle} onClick={() => setDislike(disLike + 1)}>👎 {disLike}</button> */}
     </div>
   );
 }
