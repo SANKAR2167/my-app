@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Movie } from "./Movie";
-
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 export function MovieList() {
   const [movieList, setMovieList] = useState([
     {
@@ -79,6 +80,7 @@ export function MovieList() {
           };
           setMovieList([...movieList, newMovie])
         }}>Add Movie</button>
+        <Button variant="contained">Contained</Button>
       </div>
     
       <div className='movie-list'>
