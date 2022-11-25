@@ -17,12 +17,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/movies' element={<MovieList/>} />
+        <Route path='*' element={<Notfound/>} />
       </Routes>
     </div>
   );
 }
-
-export default App;
 
 function Home(){
   return(
@@ -32,3 +31,16 @@ function Home(){
     </div>
   )
 }
+
+function Notfound(){
+  return(
+    <div>
+      <h1>404 NOT FOUND</h1>
+      <Link to="/">Home</Link>
+    </div>
+  )
+}
+
+
+export default App;
+
