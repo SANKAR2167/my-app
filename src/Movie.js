@@ -13,7 +13,7 @@ export function Movie({ movie }) {
     <div className='movie-container'>
       <img src={movie.poster} alt={movie.name} className='movie-poster' />
       <div className='movie-specs'>
-        <h2 className='movie-name'>{movie.name} <IconButton onClick={() => setShow(!show)} aria-label="toggle">
+        <h2 className='movie-name'>{movie.name} <IconButton onClick={() => setShow(!show)} aria-label="toggle" color='primary'>
       {show ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
       </IconButton></h2>
         <p className='movie-rating' style={styles}>⭐ {movie.rating}</p>
