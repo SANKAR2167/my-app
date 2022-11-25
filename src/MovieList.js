@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Movie } from "./Movie";
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 export function MovieList() {
   const [movieList, setMovieList] = useState([
