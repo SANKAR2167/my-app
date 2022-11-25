@@ -11,12 +11,15 @@ export function Counter() {
     // camelCase
     <div>
       <IconButton aria-label="like" onClick={() => setLike(like + 1)} color='primary'>
-      👍<Badge badgeContent={like} color="primary">
+      <Badge badgeContent={like} color="primary">
+      👍
       </Badge>
       </IconButton>
       
-      <IconButton aria-label="like" onClick={() => setDislike(disLike + 1)} color='error'>
-      👎 {disLike}
+      <IconButton aria-label="dislike" onClick={() => setDislike(disLike + 1)} color='error'>
+      <Badge badgeContent={disLike} color="error">
+      👎
+      </Badge>
       </IconButton>
     </div>
   );
