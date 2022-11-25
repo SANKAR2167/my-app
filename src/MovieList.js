@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Movie } from "./Movie";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 export function MovieList() {
   const [movieList, setMovieList] = useState([
     {
@@ -66,10 +67,14 @@ export function MovieList() {
   return (
     <div>
       <div className="add-movie-form">
-        <input onChange={(event)=> setName(event.target.value)} type="text" placeholder="Movie name"/>
-        <input onChange={(event)=> setPoster(event.target.value)} type="text" placeholder="Poster URL"/>
-        <input onChange={(event)=> setRating(event.target.value)} type="text" placeholder="Movie rating"/>
-        <input onChange={(event)=> setSummary(event.target.value)} type="text" placeholder="Movie summary"/>
+        <TextField onChange={(event)=> setName(event.target.value)} label="Movie Name" variant="outlined" />
+
+        <TextField onChange={(event)=> setPoster(event.target.value)} label="Poster URL" variant="outlined" />
+
+        <TextField onChange={(event)=> setRating(event.target.value)} label="Movie Rating" variant="outlined" />
+
+        <TextField onChange={(event)=> setSummary(event.target.value)} label="Movie Summary" variant="outlined" />
+
         <Button onClick={()=>{
           const newMovie = {
             name: name,
