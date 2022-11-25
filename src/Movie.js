@@ -13,12 +13,12 @@ export function Movie({ movie }) {
     <div className='movie-container'>
       <img src={movie.poster} alt={movie.name} className='movie-poster' />
       <div className='movie-specs'>
-        <h2 className='movie-name'>{movie.name}</h2>
+        <h2 className='movie-name'>{movie.name} <IconButton onClick={() => setShow(!show)} aria-label="toggle">
+      {show ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
+      </IconButton></h2>
         <p className='movie-rating' style={styles}>⭐ {movie.rating}</p>
       </div>
-      <IconButton onClick={() => setShow(!show)} aria-label="toggle">
-      {show ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
-      </IconButton>
+      
       {show ? <p className='movie-summary'>{movie.summary}</p> : null}
       <Counter />
     </div>
