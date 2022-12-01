@@ -46,3 +46,8 @@
   max-width: 850px;
     
 }
+
+.movie-detail-container{
+  max-width: 750px;
+  padding: 16px;
+}
