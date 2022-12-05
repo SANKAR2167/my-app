@@ -19,6 +19,7 @@
 .movie-container {
   background-color: white;
   width: 340px;
+  height: min-content;
 }
 
 /* RAM */
