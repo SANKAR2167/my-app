@@ -6,6 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { API } from './global';
 
 export function MovieDetails() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ export function MovieDetails() {
   // after app component is mounted
   // axios
   useEffect(()=>{
-    fetch(`https://638af1ba7220b45d22850b2c.mockapi.io/movies/${id}`, {method:'GET'}).then((data) => data.json()).then((movies) => setMovieList(movies));
+    fetch(`${API}/movies/${id}`, {method:'GET'}).then((data) => data.json()).then((movies) => setMovieList(movies));
     }, []);
 
   const styles = {

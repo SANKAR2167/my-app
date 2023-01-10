@@ -2,13 +2,13 @@ import { Movie } from "./Movie";
 import { useEffect, useState } from "react";
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import { API } from "./global";
 //container & presentational  or smart &presentational 
 export function MovieList() {
   const [movieList, setMovieList] = useState([]);
 
   const getMovies = ()=>{
-    fetch('https://638af1ba7220b45d22850b2c.mockapi.io/movies', {method:'GET'}).then((data) => data.json()).then((movies) => setMovieList(movies));
+    fetch('${API}/movies', {method:'GET'}).then((data) => data.json()).then((movies) => setMovieList(movies));
   }
 
   // after app component is mounted
@@ -16,7 +16,7 @@ export function MovieList() {
   useEffect(()=>{getMovies()}, []);
 
     const deleteMovie = (id) => {
-      fetch(`https://638af1ba7220b45d22850b2c.mockapi.io/movies/${id}`, {method:'DELETE'}).then((data) => getMovies())
+      fetch(`${API}/movies/${id}`, {method:'DELETE'}).then((data) => getMovies())
     };
   return (
     <div>
