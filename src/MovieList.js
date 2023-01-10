@@ -21,9 +21,9 @@ export function MovieList() {
   return (
     <div>
       <div className='movie-list'>
-        {movieList.map((mv) => (<Movie key={mv.id} movie={mv} id={mv.id} 
+        {movieList.map((mv) => (<Movie key={mv._id} movie={mv} id={mv._id} 
         // rendder props
-        deleteButton={<IconButton onClick={()=> deleteMovie(mv.id)} color='error' aria-lable='delete' sx={{marginLeft:'auto'}}><DeleteIcon/></IconButton>}/>))}
+        deleteButton={<IconButton onClick={()=> deleteMovie(mv._id)} color='error' aria-lable='delete' sx={{marginLeft:'auto'}}><DeleteIcon/></IconButton>}/>))}
       </div>
       
     </div>
